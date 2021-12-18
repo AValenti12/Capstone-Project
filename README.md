@@ -21,7 +21,7 @@
 #
 ## GitHub
 ## Commuication Protocols
-
+We will meet a minimum of two times a week via Zoom to discuss progress, strategize next steps, and perform analysis.git Slack is our primary communication tool where we created a group chat to provide feedback and brainstorm.git
 
 #
 ## Individual Branches
