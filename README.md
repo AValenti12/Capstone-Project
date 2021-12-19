@@ -23,7 +23,10 @@ We sourced our data from a data mining article from the website [Medium](https:/
 We will meet a minimum of two times a week via Zoom to discuss progress, strategize next steps, and perform analysis. We will aso have ad-hoc Zoom meetings as needed if someone requires additional assistance or encounters an issue.  Slack is our primary communication tool where we created a group chat to provide feedback and brainstorm.
 
 #
-## Proposed Mechine Learning Model
+## Proposed Machine Learning Model
+[simple_airbnb_ml_model.ipynb](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/ML_model/simple_airbnb_ml_model.ipynb)
+
+
 
 
 ## Proposed Databases
@@ -34,9 +37,8 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 
 
 ### Database Storage
-[SQL]()
+
 
 ### Machine Learning
-
 
 ### Dashboard
