@@ -26,8 +26,8 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 #
 ## Individual Branches
 1. nj_Segment-1
-1.
-1.
+1. zoe_branch
+1. amy_branch
 1.
 
 
