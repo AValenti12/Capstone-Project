@@ -8,12 +8,12 @@
 
 #
 ## Purpose
-Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb’s available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. We were interested in Airbnb since it has become such a common or go to resource and have had personal positive experiences with it. 
+Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnbs available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. We were interested in Airbnb since it has become such a common or go to resource and have had personal positive experiences with it. 
 
 #
 ## Source of Data (Description)
-We sourced our data from a data mining article that explored the rental landscape in New York City. 
-https://towardsdatascience.com/airbnb-rental-listings-dataset-mining-f972ed08ddec
+We sourced our data from a data mining article from the website [Medium](https://towardsdatascience.com/airbnb-rental-listings-dataset-mining-f972ed08ddec
+) that explored the rental landscape in New York City. 
 
 
 #
@@ -34,7 +34,7 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 
 
 ### Database Storage
-
+[SQL]()
 
 ### Machine Learning
 
