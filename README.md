@@ -34,16 +34,3 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 We have setup a database in Postgres using the [schema](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/database/schema.sql) we created. We did not create any ERD since there's only one table to work with. We used cleaned real dataset to upload it in Postgres. We've [succesfully uploaded](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/record_count_postgress.png?raw=true) the [dataset](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/data%20uploaded_postgress.png) that we will be using throughout the project.
 
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/data%20uploaded_postgress.png?raw=true)
-
-## Technologies Used
-
-### Data Cleaning and Analysis
-
-
-### Database Storage
-Postgress
-
-### Machine Learning
-
-### Dashboard
-There's no dashboard at this stage of the project.
