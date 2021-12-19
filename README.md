@@ -40,15 +40,15 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 ## Proposed Databases
 
 
-# Technologies Used
-## Data Cleaning and Analysis
+## Technologies Used
+### Data Cleaning and Analysis
 
 
-## Database Storage
+### Database Storage
 
 
-## Machine Learning
+### Machine Learning
 
 
-## Dashboard
+### Dashboard
 
