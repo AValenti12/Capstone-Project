@@ -13,7 +13,6 @@ Airbnb has grown tremendously over the past few years offering users a convenien
 
 #
 ## Reason for selecting this topic
-Airbnb is quickly becoming a go to source for people who travel. 
 
 #
 ## Source of Data (Description)
