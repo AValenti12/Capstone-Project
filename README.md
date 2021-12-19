@@ -1,10 +1,10 @@
 # Team AB&B (Capstone-Project)
 
 ## Team Members
-1. Amy V.
-1. Anna S.
-1. Neeraj (Nick) J.
-1. Zoe F.
+1. Amy V. (Square)
+1. Anna S. (Triangle)
+1. Neeraj (Nick) J. (Circle)
+1. Zoe F. (X)
 
 #
 ## Topic
