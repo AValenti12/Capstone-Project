@@ -26,19 +26,3 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 ## Proposed Machine Learning Model
 [simple_airbnb_ml_model.ipynb](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/ML_model/simple_airbnb_ml_model.ipynb)
 
-
-
-
-## Proposed Databases
-
-
-## Technologies Used
-### Data Cleaning and Analysis
-
-
-### Database Storage
-
-
-### Machine Learning
-
-### Dashboard
