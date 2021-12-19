@@ -1,4 +1,4 @@
-# Team AB&B (Capstone-Project)
+# Team Airbnb (Capstone-Project)
 
 ## Team Members
 1. Amy V. (Square)
