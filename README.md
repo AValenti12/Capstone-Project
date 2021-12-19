@@ -8,9 +8,12 @@
 
 #
 ## Topic
+Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb’s available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. 
+
 
 #
 ## Reason for selecting this topic
+Airbnb is quickly becoming a go to source for people who travel. 
 
 #
 ## Source of Data (Description)
