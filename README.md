@@ -8,7 +8,7 @@
 
 #
 ## Topic
-Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb’s available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. 
+Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnbâ€™s available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. 
 
 
 #
@@ -39,4 +39,16 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 
 ## Proposed Databases
 
+
+# Technologies Used
+## Data Cleaning and Analysis
+
+
+## Database Storage
+
+
+## Machine Learning
+
+
+## Dashboard
 
