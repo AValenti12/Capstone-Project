@@ -2,7 +2,7 @@
 CREATE TABLE abnb_listings (
      id INT NOT NULL,
      listing_url VARCHAR,
-     scrape_id BIGINT,
+     scrape_id VARCHAR,
      last_scraped VARCHAR,
      name VARCHAR,
      summary VARCHAR,
