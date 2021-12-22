@@ -1,5 +1,6 @@
 -- Creating tables for PH-EmployeeDB
 CREATE TABLE abnb_listings (
+     id VARCHAR NOT NULL,
      host_response_rate VARCHAR,
      host_is_superhost VARCHAR,
      host_identity_verified VARCHAR,
@@ -35,6 +36,7 @@ CREATE TABLE abnb_listings (
      cancellation_policy VARCHAR,
      require_guest_profile_picture VARCHAR,
      require_guest_phone_verification VARCHAR,
-     reviews_per_month FLOAT4
+     reviews_per_month FLOAT4,
+     is_success INT
 );
 
