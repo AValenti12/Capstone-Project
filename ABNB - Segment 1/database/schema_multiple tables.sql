@@ -34,8 +34,7 @@ SELECT
      bedrooms,
      beds,
      bed_type,
-     amenities,
-     review_scores_value
+     amenities
 INTO abnb_property_desc
 FROM abnb_listings 
 
