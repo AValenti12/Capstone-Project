@@ -1,3 +1,4 @@
+config.py
 *.zip
 #DS Store
 .DS_Store
