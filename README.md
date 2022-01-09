@@ -12,7 +12,7 @@ https://docs.google.com/presentation/d/1T547BrGVOcnZ-Ra_A7yQJQpM_mZYjYGBYauYgHVS
 
 ---
 ## Purpose
-Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb�s available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. We were interested in Airbnb since it has become such a common or go to resource and have had personal positive experiences with it. 
+Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb's available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. We were interested in Airbnb since it has become such a common or go to resource and have had personal positive experiences with it. 
 
 
 ---
@@ -25,10 +25,12 @@ We sourced our data from a data mining article from the website [Medium](https:/
 ## GitHub
 ## Communication Protocols
 
-We will meet a minimum of two times a week via Zoom to discuss progress, strategize next steps, and perform analysis. We will aso have ad-hoc Zoom meetings as needed if someone requires additional assistance or encounters an issue.  Slack is our primary communication tool where we created a group chat to provide feedback and brainstorm.
+We will meet a minimum of two times a week via Zoom to discuss progress, strategize next steps, and perform analysis. We will also have ad-hoc Zoom meetings as needed if someone requires additional assistance or encounters an issue.  Slack is our primary communication tool where we created a group chat to provide feedback and brainstorm.
 
 ---
 ## Proposed Machine Learning Model
+We propose to use logistic regression model for this project. Based on our outcomes we may implement other model(s) as needed.
+
 Python Files:
 * [simple_airbnb_ml_model.ipynb](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/ML_model/simple_airbnb_ml_model.ipynb)
 * [simple_airbnb_ml_model.ipynb](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/ML_model/simple_airbnb_ml_model.ipynb)
@@ -65,6 +67,21 @@ Upcoming Challenge and Suggestions for Improvement
 ---
 
 ## Proposed Databases
+We changed our strategy to use MongoDB instead of Postgress as we proposed earlier. Illustrated below is our [updated ERD](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/QuickDBD-export.png). Although this ERD is not needed with MongoDB but still it is helpful to see all the collections with relevant columns in one place.
+
+<img src="https://github.com/AValenti12/Capstone-Project/blob/main/Resources/QuickDBD-export.png?raw=true" width="900" height="400">
+
+We have successfully created MongoDB database loaded up with relevant static data. Also, we have integrated this database with our mainstream data modeling. Here's a [snap shot](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/db_collections.png) of how our collections (four main collections) look like.
+
+<img src="https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/db_collections.png?raw=true" width="900" height="500">
+
+We also [joined the two collections](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/Join.png) `(not Pandas joins)` and created a new collection out of it. "host_details_review" in the above illustration is the result of this aggregation activity.
+<img src="https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/Join.png?raw=true" width="900" height="500">
+
+`We have hosted our MongoDB at remote site using AWS. Our data is accessible directly using the API.`
+
+#
+### Originally proposed Databases
 We have setup a database in Postgres using the [schema](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/database/schema.sql) we created. We did not create any ERD since there's only one table to work with. We used cleaned real dataset to upload it in Postgres. We've [succesfully uploaded](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/record_count_postgress.png?raw=true) the [dataset](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/data%20uploaded_postgress.png) that we will be using throughout the project.
 
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/data%20uploaded_postgress.png?raw=true)
