@@ -91,9 +91,7 @@ We have setup a database in Postgres using the [schema](https://github.com/AVale
 
 ## Technology Used
 
-We intend to use the following set of diversified **[technologies](https://github.com/AValenti12/Capstone-Project/blob/nj-new/ABNB%20-%20Segment%201/tech_used/tech.md)**.
-
-![](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/technology_used.png?raw=true)
+Please refer to our tech.md file
 
 ---
 
