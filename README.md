@@ -54,7 +54,7 @@ Airbnb Listings Data Shape Original vs. Clean
 
 ## Limitations
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/Screen%20Shot%202022-01-09%20at%204.36.45%20PM.png?raw=true)
-> Since this a simple model, comparing the importance of each can help determine if certain variables should be removed. After reviewing the chart, we decided to remove the Superhost variable to avoid skewing the outcomes.  
+> Since this is a simple model, comparing the importance of each can help determine if certain variables should be removed. After reviewing the chart, we decided to remove the Superhost variable to avoid skewing the outcomes.  
 
 ---
 
