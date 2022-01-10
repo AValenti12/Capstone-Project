@@ -32,10 +32,11 @@ We will meet a minimum of two times a week via Zoom to discuss progress, strateg
 ## Proposed Machine Learning Model
 Since out outcome is binary (whether or not the rental was successful), we propose to use logistic regression model for this project. Based on our outcomes we may implement other model(s) as needed.
 
-Python File:
+Python File: 
 * [Model Rework](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_rework.ipynb)
-* [Data Integration Area 1](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/dash/table.py)
-* [Data Integration Area 2](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/database_integration/Read_Data_MongoDF.ipynb)
+* [Data Integration Area 1](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model.ipynb)
+* [Data Integration Area 2](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/dash/table.py)
+* [Data Integration Area 3](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/database_integration/Read_Data_MongoDF.ipynb)
 
 Airbnb Listings Dataset Original vs. Clean
 
