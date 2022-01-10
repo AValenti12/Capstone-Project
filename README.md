@@ -2,8 +2,9 @@
 
 ## Segment 2 Presentation
 
-https://docs.google.com/presentation/d/1T547BrGVOcnZ-Ra_A7yQJQpM_mZYjYGBYauYgHVS4ok/edit?usp=sharing
+### [Our Google presentation](https://docs.google.com/presentation/d/1T547BrGVOcnZ-Ra_A7yQJQpM_mZYjYGBYauYgHVS4ok/edit?usp=sharing)
 
+#
 ## Team Members
 1. Amy V. (Square)
 1. Anna S. (Triangle)
