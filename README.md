@@ -47,7 +47,7 @@ Airbnb Listings Data Shape Original vs. Clean
 ## Logistic Regression Model
 
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/Screen%20Shot%202022-01-09%20at%209.13.19%20PM.png?raw=true)
->  The columns that were not already numerical are given dummy variables to be able to be passed through the model. The data was then split into three sets: a training set, test set, and validation set. 
+>  The columns that were not already numerical are given dummy variables to be able to be passed through the model. The data was then split into three sets: a training set and test set. 
 
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/Screen%20Shot%202022-01-09%20at%209.14.29%20PM.png?raw=true)
 > The model is able to predict the outcome with about 80% accuracy.
@@ -81,7 +81,9 @@ We have setup a database in Postgres using the [schema](https://github.com/AVale
 
 ## Technology Used
 
-Please refer to our tech.md file
+We intend to use the following set of diversified **[technologies](https://github.com/AValenti12/Capstone-Project/blob/nj-new/ABNB%20-%20Segment%201/tech_used/tech.md)**.
+
+![](https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/technology_used.png?raw=true)
 
 ---
 
