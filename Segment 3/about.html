@@ -11,66 +11,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&family=Lobster&family=Oleo+Script&family=Lato&family=Forum&family=Poppins:wght@100&family=Klein&family=Pacifico&family=Rubik:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  
-  <style>
-    
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: rgba(192, 197, 197, 0.55);
-    overflow-x: hidden;
-    transition: 0.2s;
-    padding-top: 70px;
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 15px;
-    /* color: #818181; */
-    display: block;
-    transition: 0.05s;
-    text-align: center;
-  }
-  
-  .sidenav a:hover {
-    background-color: transparent;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 36px;
-  }
-  
-  .w3-bar-item {
-    margin: 20px;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-</style>
+  <link href="static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="w3-top">
+  <div class="w3-top w3-padding">
     
-    <div class="topnav" id="myNavbar">
-      <!-- Navbar -->
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: rgb(43,43,43);">&times;</a>
+        <!-- Navbar (sit on top) -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: rgb(43,43,43);">&times;</a>
           <a href="/about.html" onclick="closeNav()" class="w3-bar-item" style="color: rgb(43,43,43);"><i class='material-icons'>&#xea19;</i>About</a>
           <a href="/t.html" onclick="closeNav()" class="w3-bar-item" style="color: rgb(43,43,43);"><i class="material-icons">&#xe2c2;</i><br>Data</a>
           <a href="/charts.html" onclick="closeNav()" class="w3-bar-item" style="color: rgb(43,43,43);"><i class="material-icons">&#xf092;</i><br>Charts</a>
@@ -80,45 +29,47 @@
       </div>
 
       <div class="w3-right w3-padding">
-        <span id="bars" style="font-size:3vw;cursor:pointer;color:rgb(43,43,43);" onclick="openNav()" class="material-icons">&#xe5c3;</span>
+          <span id="bars" style="font-size:3vw;cursor:pointer;color:rgb(43,43,43);" onclick="openNav()" class="material-icons">&#xe5c3;</span>
       </div>
-    </div>
+      
   </div>
   
-  <!-- Page content -->
-  <div id="main">
-    <div id='about' class="row2">
-      <div class="about">
-        <h5 style="font-size: 7vw;">About</h5>
-        <p>Rental properties can be a great source of passive income once it has consistent bookings. 
-          Use this interactive dashboard to see how your potential listing compares to other rentals in NYC.
-          <hr></hr>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere 
-          euismod augue eget viverra. Sed eros ante, semper in lectus sit amet, 
-          venenatis placerat ante. Aliquam tincidunt, lorem ornare fringilla egestas, 
-          ipsum magna tempus tellus, vitae mollis mi ligula vitae tortor. Aliquam 
-          aliquam nibh ut ligula lobortis convallis. Pellentesque vel lobortis arcu. 
-          Pellentesque eu porttitor enim, in venenatis sapien. In placerat ullamcorper 
-          velit. Sed suscipit placerat magna ut lacinia. Pellentesque tempor at leo sit 
-          amet posuere. Mauris sit amet est sollicitudin, sagittis metus ut, tempor ipsum. 
-          Duis consequat, enim eu dapibus venenatis, eros ex tempus dolor, quis euismod 
-          nisi diam id quam. Maecenas eget viverra dui. Sed dui eros, facilisis a accumsan 
-          vitae, vestibulum ut diam.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere 
-          euismod augue eget viverra. Sed eros ante, semper in lectus sit amet, 
-          venenatis placerat ante. Aliquam tincidunt, lorem ornare fringilla egestas, 
-          ipsum magna tempus tellus, vitae mollis mi ligula vitae tortor. Aliquam 
-          aliquam nibh ut ligula lobortis convallis. Pellentesque vel lobortis arcu. 
-          Pellentesque eu porttitor enim, in venenatis sapien. In placerat ullamcorper 
-          velit. Sed suscipit placerat magna ut lacinia. Pellentesque tempor at leo sit 
-          amet posuere. Mauris sit amet est sollicitudin, sagittis metus ut, tempor ipsum. 
-          Duis consequat, enim eu dapibus venenatis, eros ex tempus dolor, quis euismod 
-          nisi diam id quam. Maecenas eget viverra dui. Sed dui eros, facilisis a accumsan 
-          vitae, vestibulum ut diam.
-        </p>
-        
-      </div>
-    </div>  
+  
+    <!-- Page content -->
+    <div id="main">
+      <div id='about' class="row2">
+        <div class="about">
+          <h5 style="font-size: 7vw;">About</h5>
+          <p>Rental properties can be a great source of passive income once it has consistent bookings. 
+            Use this interactive dashboard to see how your potential listing compares to other rentals in NYC.
+            <hr></hr>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere 
+            euismod augue eget viverra. Sed eros ante, semper in lectus sit amet, 
+            venenatis placerat ante. Aliquam tincidunt, lorem ornare fringilla egestas, 
+            ipsum magna tempus tellus, vitae mollis mi ligula vitae tortor. Aliquam 
+            aliquam nibh ut ligula lobortis convallis. Pellentesque vel lobortis arcu. 
+            Pellentesque eu porttitor enim, in venenatis sapien. In placerat ullamcorper 
+            velit. Sed suscipit placerat magna ut lacinia. Pellentesque tempor at leo sit 
+            amet posuere. Mauris sit amet est sollicitudin, sagittis metus ut, tempor ipsum. 
+            Duis consequat, enim eu dapibus venenatis, eros ex tempus dolor, quis euismod 
+            nisi diam id quam. Maecenas eget viverra dui. Sed dui eros, facilisis a accumsan 
+            vitae, vestibulum ut diam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere 
+            euismod augue eget viverra. Sed eros ante, semper in lectus sit amet, 
+            venenatis placerat ante. Aliquam tincidunt, lorem ornare fringilla egestas, 
+            ipsum magna tempus tellus, vitae mollis mi ligula vitae tortor. Aliquam 
+            aliquam nibh ut ligula lobortis convallis. Pellentesque vel lobortis arcu. 
+            Pellentesque eu porttitor enim, in venenatis sapien. In placerat ullamcorper 
+            velit. Sed suscipit placerat magna ut lacinia. Pellentesque tempor at leo sit 
+            amet posuere. Mauris sit amet est sollicitudin, sagittis metus ut, tempor ipsum. 
+            Duis consequat, enim eu dapibus venenatis, eros ex tempus dolor, quis euismod 
+            nisi diam id quam. Maecenas eget viverra dui. Sed dui eros, facilisis a accumsan 
+            vitae, vestibulum ut diam.
+          </p>
+          
+        </div>
+      </div>  
+    </div>
   </div>
   <script>
     function openNav() {
