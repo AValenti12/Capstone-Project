@@ -6,16 +6,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from password import password
+from submit import test 
 
-client = pymongo.MongoClient(f"mongodb+srv://capstone_db:{password}@cluster0.ed7en.mongodb.net/listings_db?retryWrites=true&w=majority")
 
-def model():
-    db = client.listings_db
-    collection1 = db.train_X.find()
-    collection2 = db.train_y.find()
-    X = pd.DataFrame(collection1)
-    y = pd.DataFrame(collection2)
+def model(X,y,test):
     X = X.drop('_id',1)
     X = X[:15963]
 
@@ -50,12 +44,17 @@ def model():
     classifier.fit(X_train, y_train)
 
     #making predictions
-    y_pred = classifier.predict(X_test)
+    y_pred = classifier.predict(test)
     if y_pred == 1:
         result = "Success"
     else:
         result = "May need some work"
     return result
+
+if __name__ == "__main__":
+
+    # If running as script, print scraped data
+    print(model())    
 
 #accuracy of the model
 # print(accuracy_score(y_test, y_pred))
