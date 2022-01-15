@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NYC Rental Rating</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&family=Lato&family=Forum" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="../static/css/style.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  
+  <div class="w3-top">
+    <div class="w3-left home" id="home">
+    <div class="w3-wide w3-padding"  style="font-size:3vw;font-weight:bold;position:absolute;color:rgb(43,43,43);">NYC Rental Rating</div>
+  </div>
+    <div class="topnav" id="myNavbar">
+      <!-- Navbar -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">&#xe5cd;</i></a>
+        <a href="/about" onclick="closeNav()" class="w3-bar-item"><i class='material-icons'>&#xea19;</i><br>About</a>
+        <a href="/data" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe2c2;</i><br>Data</a>
+        <a href="/charts" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf092;</i><br>Charts</a>
+        <a href="/test" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xeb9b;</i><br>Test</a>
+        <a href="/team" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf233;</i><br>Team</a>
+        <a href="/" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe5d8;</i><br>Top</a>
+      </div>
+
+      <div class="w3-right w3-padding">
+        <span id="bars" style="font-size:5vw;cursor:pointer;color:rgb(43,43,43);" onclick="openNav()" class="material-icons">&#xe5d4;</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Page content -->
+  <div id="main">
+    <div class="w3-responsive row1">
+      <div class="jumbotron">
+        <div class="content-holder">
+          <h1 style="font-size:10vw;font-weight: 900;padding-top: 18%;margin-left: 1vw;margin-right: 3vw;">Is your rental ready to be listed?</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "45vw";
+      document.getElementById("bars").style.display = "none";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("bars").style.display = "block";
+    }
+  </script>
+
+ 
+</body>
+</html>
