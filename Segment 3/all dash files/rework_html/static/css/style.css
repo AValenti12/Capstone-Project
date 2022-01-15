@@ -71,15 +71,16 @@
   
   .content-holder {
     /* background-color: rgba(221, 221, 221, 0.392); */
-    /* left: 20%!important; */
+    left: 20%!important;
     z-index: 0;
     color: beige;
-    /* top: 30%!important; */
-    /* transform: translate(-20%, -20%); */
+    top: 30%!important;
+    transform: translate(-20%, -20%);
   }
   
   .jumbotron {
-    background: #000 url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Venice_Carnival_(2010).jpg") no-repeat center center;
+    background: #000 url("https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
