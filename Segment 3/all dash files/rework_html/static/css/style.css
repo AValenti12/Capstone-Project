@@ -1,0 +1,109 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(192, 197, 197, 0.55);
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 70px;
+  }
+  .sidenav a {
+    float: left;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: rgb(43,43,43);
+    display: block;
+    transition: 0.05s;
+    text-align: center;
+  }
+  
+  .sidenav a:hover {
+    background-color: transparent;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+  }
+  
+  .w3-bar-item {
+    margin: 5vw;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+  }
+  
+  .material-icons {
+    font-size: 2vw;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  body,h2,h3,h4,h5,h6,p {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(43,43,43);
+    background-color: rgb(195,171,163);
+  }
+  body{
+    overflow-y: scroll;
+  }
+  h1{
+    font-size: 10vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-align: left; 
+  }
+  
+  p {font-size: 5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  .content-holder {
+    /* background-color: rgba(221, 221, 221, 0.392); */
+    /* left: 20%!important; */
+    z-index: 0;
+    color: beige;
+    /* top: 30%!important; */
+    /* transform: translate(-20%, -20%); */
+  }
+  
+  .jumbotron {
+    background: #000 url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Venice_Carnival_(2010).jpg") no-repeat center center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    color: #fff;
+    height: calc(100vh);
+  }
+  .row {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .row2{
+   color:rgb(43,43,43);
+   align-items: center;
+   overflow-x: scroll;
+  }
+  hr{
+    height: 1px;
+    background-color: rgb(43,43,43);
+    border: none;
+    }
+  
+  table#myTable.table.table-striped {
+    align-self:center;
+  }
+  
+  
