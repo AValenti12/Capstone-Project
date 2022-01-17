@@ -1,8 +1,8 @@
 # Team Airbnb (Capstone-Project)
 
+## Segment 2 Presentation
 
-
-## [Our Google presentation](https://docs.google.com/presentation/d/1T547BrGVOcnZ-Ra_A7yQJQpM_mZYjYGBYauYgHVS4ok/edit?usp=sharing)
+### [Our Google presentation](https://docs.google.com/presentation/d/1T547BrGVOcnZ-Ra_A7yQJQpM_mZYjYGBYauYgHVS4ok/edit?usp=sharing)
 
 #
 ## Team Members
@@ -24,7 +24,9 @@ We sourced our data from a data mining article from the website [Medium](https:/
 
 ---
 ## GitHub
-**Note:** Communication protocols removed as per Segment 3 guidelines
+## Communication Protocols
+
+We will meet a minimum of two times a week via Zoom to discuss progress, strategize next steps, and perform analysis. We will also have ad-hoc Zoom meetings as needed if someone requires additional assistance or encounters an issue.  Slack is our primary communication tool where we created a group chat to provide feedback and brainstorm.
 
 ---
 ## Proposed Machine Learning Model
