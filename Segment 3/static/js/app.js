@@ -77,7 +77,10 @@ function updateFilters() {
     // filteredData = filteredData.filter(row => row.key[0] === key[1]);
     console.log(filteredData)
     // filteredData.filter(row => console.log(val))
-    filteredData = filteredData.filter(row => row[key] === parseint(val));
+    filteredData = filteredData.filter(row => row[key].toString() === val);
+    console.log(typeof key)
+    console.log(typeof val)
+    
       // console.log(Object.keys(i));
       // console.log(row.i);
       // console.log(i);
