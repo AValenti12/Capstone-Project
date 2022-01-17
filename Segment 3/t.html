@@ -44,51 +44,37 @@
           <div class='w3-left w3-padding row1'>
               <a href="#demo" data-toggle="collapse">Simple collapsible</a>
               <div id="demo" class="collapse"> {% endcomment %}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <form class="bg-light responsive">
+                    <!--<p><h5>Filter Search</h5></p>-->
+                </form>
+                <ul class= "responsive"><h5>Filter Search</h5><!"list-group">
+                    <!--<p><h5>Filter Search</h5></p> -->
+                    <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
+                        <label for="Price">Your budget (per night)?</label>
+                        <input class="float-right" type="number" placeholder="$100" id="Price" />
+                    </li>
+                    <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
+                        <label for="Accommodates">How many people?</label>
+                        <input class="float-right" type="number" placeholder="2" id="Accommodates" />
+                    </li>
+                    <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
+                        <label for="Beds">No. of beds?</label>
+                        <input class="float-right" type="number" placeholder="1" id="Beds" />
+                    </li>
+                    <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
+                        <label for="Neighborhood">Where in city?</label>
+                        <input class="float-right" type="text" placeholder="Bowery" id="Neighborhood" />
+                    </li>
+                    <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
+                        <label for="Review Rating">Review Ratings (in numbers)?</label>
+                        <input class="border border-secondary" type="number" placeholder="5" id="Review Rating" />
+                    </li>
+                </ul>
               </div>
-              
           </div>
         </div> 
-        <!-- Filter added by Nick 01/15-->
-      <div class="row">
-        <div class="col-md-3" >
-          <form class="bg-light responsive">
-              <!--<p><h5>Filter Search</h5></p>-->
-          </form>
-          <ul class= "responsive"><h5>Filter Search</h5><!"list-group">
-             <!--<p><h5>Filter Search</h5></p> -->
-             <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
-                  <label for="Price">Your budget (per night)?</label>
-                  <input class="border border-secondary" type="number" placeholder="$100" id="Price" />
-              </li>
-              <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
-                  <label for="Accommodates">How many people?</label>
-                  <input class="border border-secondary" type="number" placeholder="2" id="Accommodates" />
-              </li>
-              <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
-                  <label for="Beds">No. of beds?</label>
-                  <input class="border border-secondary" type="number" placeholder="1" id="Beds" />
-              </li>
-              <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
-                  <label for="Neighborhood">Where in city?</label>
-                  <input class="border border-secondary" type="text" placeholder="Bowery" id="Neighborhood" />
-              </li>
-              <li class="responsive nav-item col-6 col-md">  <!"list-group-item">
-                  <label for="Review Rating">Review Ratings (in numbers)?</label>
-                  <input class="border border-secondary" type="number" placeholder="5" id="Review Rating" />
-              </li>
-              <!-- Remove Button -->
-              <!-- <li class="bg-dark nav-item col-6 col-md">  <!"list-group-item">
-                  <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
-              </li> -->
-          </ul>
-        </div>
-        <!-- Fileter added by Nick 01/15-->
-
-        <div class="col-md-8" responsive> <!--style="width: 1000px;overflow-x: scroll;"> -->
-        <!--<div class='w3-left w3-padding row2' style="width: 1000px;overflow-x: scroll;"> -->
+ 
+        <div class='w3-left w3-padding row2' style="width: 1000px;overflow-x: scroll;">
           
             <table id="myTable" responsive border="1" class="table table-striped">
               <thead>
@@ -124,22 +110,8 @@
             </table>
           </div>
         </div>
-      </div>
+      <!--</div>-->
     </div>          
-
-
-    <!--><script>
-    
-      function openNav() {
-      document.getElementById("mySidenav").style.width = "300px";
-      document.getElementById("bars").style.display = "none";
-      }
-      
-      function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("bars").style.display = "block";
-      }
-    </script> -->
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="static/js/data.js"></script>
