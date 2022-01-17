@@ -19,10 +19,10 @@
 
 <body>
   
-  <div class="w3-top">
+  <div class="w3-top" style="background-color: transparent;">
     <div class="w3-left home" id="home">
-    <div class="w3-wide w3-padding"  style="font-size:3vw;font-weight:bold;position:absolute;color:rgb(43,43,43);">NYC Rental Rating</div>
-  </div>
+      <div class="w3-wide w3-padding"  style="font-size:3vw;font-weight:bold;position:absolute;color:#fdf4eb;">NYC Rental Rating</div>
+    </div>
     <div class="topnav" id="myNavbar">
       <!-- Navbar -->
       <div id="mySidenav" class="sidenav">
@@ -32,28 +32,26 @@
         <a href="/charts" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf092;</i><br>Charts</a>
         <a href="/test" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xeb9b;</i><br>Test</a>
         <a href="/team" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf233;</i><br>Team</a>
-        <a href="/" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe5d8;</i><br>Top</a>
+        <a href="/" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe88a;</i><br>Home</a>
       </div>
 
       <div class="w3-right w3-padding">
-        <span id="bars" style="font-size:5vw;cursor:pointer;color:rgb(43,43,43);" onclick="openNav()" class="material-icons">&#xe5d4;</span>
+        <span id="bars" style="font-size:5vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
       </div>
     </div>
   </div>
   
   <!-- Page content -->
-  <div id="main">
-    <div class="w3-responsive row1">
-      <div class="jumbotron">
-        <div class="content-holder">
-          <h1 style="font-size:10vw;font-weight: 900;padding-top: 18%;margin-left: 1vw;margin-right: 3vw;">Is your rental ready to be listed?</h1>
-        </div>
-      </div>
+  <div class="jumbotron">
+    <div class="content-holder">
+      <h1>Is your rental ready to be listed?</h1>
     </div>
   </div>
+  
+ 
   <script>
     function openNav() {
-      document.getElementById("mySidenav").style.width = "45vw";
+      document.getElementById("mySidenav").style.width = "28vw";
       document.getElementById("bars").style.display = "none";
     }
     
