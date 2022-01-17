@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
 from flask_pymongo import pymongo
 import pandas as pd
 from config import db_password
@@ -29,7 +29,9 @@ def index():
 
 @app.route("/test")
 def test():
-    return render_template('test.html')
+    db = client.listings_db
+    coll = db.result.find_one()
+    return render_template('test.html', result=coll)
 
 # @app.route("/team.html")
 # def team():
@@ -40,38 +42,23 @@ def test():
 #     return 
 
 @app.route('/submit', methods = ['POST','GET'])
-def get_data_from_html():
-    test = ':..........('
+def submit():
+    db = client.listings_db
+    collection1 = db.X_set.find()
+    collection2 = db.y_set.find()
+    X = pd.DataFrame(collection1)
+    y = pd.DataFrame(collection2)
+    
     if request.method == 'POST':
-        test.append(request.POST('idRadio'))
-        # test.append(request.POST.get('accoInput'))
-        # test.append(request.POST.get('bathInput'))
-        # test.append(request.POST.get('bedroomInput'))
-        # test.append(request.POST.get('bedInput'))
-        # test.append(request.POST.get('bedRadio'))
-        # test.append(request.POST.get('amenitInput'))
-        # test.append(request.POST.get('priceInput'))
-        # test.append(request.POST.get('depositInput'))
-        # test.append(request.POST.get('cleanInput'))
-        # test.append(request.POST.get('guestInput'))
-        # test.append(request.POST.get('extraInput'))
-        # test.append(request.POST.get('minInput'))
-        # test.append(request.POST.get('maxInput'))
-        # test.append(request.POST.get('instantRadio'))
-        # test.append(request.POST.get('busInput'))
-        # test.append(request.POST.get('cancelRadio'))
-        # test.append(request.POST.get('picRadio'))
-        # test.append(request.POST.get('phoneRadio'))
-        # test.append(request.POST.get('placeRadio'))
-        # test.append(request.POST.get('roomRadio'))
-        # db = client.listings_db
-        # collection1 = db.X_set.find()
-        # collection2 = db.y_set.find()
-        # X = pd.DataFrame(collection1)
-        # y = pd.DataFrame(collection2)
-        #result = model(X,y,test)
-    print(test)
-    return render_template("submit.html", test=test) #result
-
+        test = []
+        t = request.form.getlist('arr[]')
+        for i in t:
+            test.append(float(i))
+    d_result = model.logreg(X,y,test)
+    collection3 = db.result
+    collection3.insert(d_result)
+    return redirect('/test',code=302)
+    
+    
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
