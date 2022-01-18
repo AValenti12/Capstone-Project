@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NYC Rental Rating</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&family=Lobster&family=Oleo+Script&family=Lato&family=Forum&family=Poppins:wght@100&family=Klein&family=Pacifico&family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="../static/css/style.css" rel="stylesheet">
+  <style>
+    
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: rgba(192, 197, 197, 0.762);
+      overflow-x: hidden;
+      transition: 0.2s;
+      padding-top: 70px;
+    }
+    .sidenav a {
+      float: left;
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 1.5vw;
+      font-weight: bolder;
+      /* color: #818181; */
+      display: block;
+      transition: 0.05s;
+      text-align: center;
+    }
+    
+    .sidenav a:hover {
+      background-color: transparent;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 4vw;
+    }
+    
+    .w3-bar-item {
+      margin: 5vw;
+      width: 5vw;
+      height: 5vw;
+      text-align: center;
+    }
+  
+    .material-icons {
+      font-size: 2vw;
+    }
+  
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  
+  </style>
+</head>
+
+<body>
+  
+  <div class="w3-top">
+    <div class="w3-left home">
+    <div class="position-fixed w3-padding"  style="font-size:10vw;position:absolute;color:rgb(43,43,43);background-color: rgb(195,171,163);">Test</div>
+    </div>
+    <div class="topnav" id="myNavbar">
+      <!-- Navbar -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">&#xe5cd;</i></a>
+        <a href="/about.html" onclick="closeNav()" class="w3-bar-item"><i class='material-icons'>&#xea19;</i><br>About</a>
+        <a href="/t.html" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe2c2;</i><br>Data</a>
+        <a href="/charts.html" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf092;</i><br>Charts</a>
+        <a href="/test.html" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xeb9b;</i><br>Test</a>
+        <a href="/team.html" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf233;</i><br>Team</a>
+        <a href="/index.html" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe5d8;</i><br>Top</a>
+      </div>
+
+      <div class="w3-right w3-padding">
+        <span id="bars" style="font-size:5vw;cursor:pointer;color:rgb(43,43,43);" onclick="openNav()" class="material-icons">&#xe5c3;</span>
+      </div>
+    </div>
+  </div>
+        
+    <!-- Page content -->
+    <p style="font-size: 3vw;padding-top: 15%;">Now, check to see if your rental may also get positive feed back if listed by inputting your information below</p> 
+    <hr>
+    <div class="row" style="font-size: 2.5vw;">
+      <div class="col-md-6">
+        <form action="/submit" method="POST">
+          <div class="name">
+              Is your identity verified?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="idRadio" id="idRadio1" value="1">
+              <label class="form-check-label" for="idRadio1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="idRadio" id="idRadio2" value="0">
+              <label class="form-check-label" for="idRadio2">
+                No
+              </label>
+            </div> 
+
+            <!-- How many people does the rental accommodate?
+            <div class="form-group">
+              <label for="accoInput"></label>
+              <input type="text" class="form-control" name="accoInput" id="accoInput" placeholder="2">
+            </div>
+
+            How many bathrooms?
+            <div class="form-group">
+              <label for="bathInput"></label>
+              <input type="num" class="form-control" name="bathInput" id="bathInput" placeholder="3">
+            </div>
+
+            How many bedrooms?
+            <div class="form-group">
+              <label for="bedroomInput"></label>
+              <input type="num" class="form-control" name="bedroomInput" id="bedroomInput" placeholder="1">
+            </div>
+
+            How many beds?
+            <div class="form-group">
+              <label for="bedInput"></label>
+              <input type="num" class="form-control" name="bedInput" id="bedInput" placeholder="2">
+            </div>
+
+            What is the main type of bed?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="bedRadio" id="bedRadio1" value="4">
+              <label class="form-check-label" for="bedRadio1">
+                Real Bed
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="bedRadio" id="bedRadio2" value="3">
+              <label class="form-check-label" for="bedRadio2">
+                Futon 
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="bedRadio" id="bedRadio3" value="2">
+              <label class="form-check-label" for="bedRadio3">
+                Pull-out Sofa
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="bedRadio" id="bedRadio4" value="1">
+              <label class="form-check-label" for="bedRadio4">
+                Airbed
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="bedRadio" id="bedRadio5" value="0">
+              <label class="form-check-label" for="bedRadio5">
+                Couch
+              </label>
+            </div>
+
+            How many amenities are provided?
+            <div class="form-group">
+              <label for="amenitInput"></label>
+              <input type="num" class="form-control" name="amenitInput" id="amenitInput" placeholder="12">
+            </div>
+
+            What is the price of the rental?
+            <div class="form-group">
+              <label for="priceInput"></label>
+              <input type="num" class="form-control" name="priceInput" id="priceInput" placeholder="250">
+            </div>
+
+            How much will the security deposit be?
+            <div class="form-group">
+              <label for="depositInput"></label>
+              <input type="num" class="form-control" name="depositInput" id="depositInput" placeholder="100">
+            </div>
+
+            How much is the cleaning fee
+            <div class="form-group">
+              <label for="cleanInput"></label>
+              <input type="num" class="form-control" name="cleanInput" id="cleanInput" placeholder="50">
+            </div>
+
+            How many guests are initially included?
+            <div class="form-group">
+              <label for="guestInput"></label>
+              <input type="num" class="form-control" name="guestInput" id="guestInput" placeholder="2">
+            </div>
+
+            How much does each extra guest cost?
+            <div class="form-group">
+              <label for="extraInput"></label>
+              <input type="num" class="form-control" name="extraInput" id="extraInput" placeholder="20">
+            </div>
+
+            What is the minimum amount of nights someone can stay?
+            <div class="form-group">
+              <label for="minInput"></label>
+              <input type="num" class="form-control" name="minInput" id="minInput" placeholder="1">
+            </div>
+
+            What is the maximum amount of nights someone can stay? 
+            <div class="form-group">
+              <label for="maxInput"></label>
+              <input type="num" class="form-control" name="maxInput" id="maxInput" placeholder="30">
+            </div>
+
+            Is the rental instantly bookable?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="instantRadio" id="instantRadio1" value="1">
+              <label class="form-check-label" for="instantRadio1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="instantRadio" id="instantRadio2" value="0">
+              <label class="form-check-label" for="instantRadio2">
+                No
+              </label>
+            </div>
+
+            Is the rental business travel ready?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="busInput" id="busInput1" value="1">
+              <label class="form-check-label" for="busInput1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="busInput" id="busInput2" value="0">
+              <label class="form-check-label" for="busInput2">
+                No
+              </label>
+            </div>
+            
+            What is the cancellation policy?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cancelRadio" id="cancelRadio1" value="4">
+              <label class="form-check-label" for="cancelRadio1">
+                Flexible
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cancelRadio" id="cancelRadio2" value="3">
+              <label class="form-check-label" for="cancelRadio2">
+                Moderate
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cancelRadio" id="cancelRadio3" value="2">
+              <label class="form-check-label" for="cancelRadio3">
+                Strict 14 days with grace period
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cancelRadio" id="cancelRadio4" value="1">
+              <label class="form-check-label" for="cancelRadio4">
+                Super strict 30 days
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cancelRadio" id="cancelRadio5" value="0">
+              <label class="form-check-label" for="cancelRadio5">
+                Super strict 60 days
+              </label>
+            </div>
+
+            Do you require guests to have a profile picture?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="picRadio" id="picRadio1" value="1">
+              <label class="form-check-label" for="picRadio1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="picRadio" id="picRadio2" value="0">
+              <label class="form-check-label" for="picRadio2">
+                No
+              </label>
+            </div>
+
+            Do you require guests to verify their phone number?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="phoneRadio" id="phoneRadio1" value="1">
+              <label class="form-check-label" for="phoneRadio1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="phoneRadio" id="phoneRadio2" value="0">
+              <label class="form-check-label" for="phoneRadio2">
+                No
+              </label>
+            </div>
+
+            Which Borough is the rental located in?
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="placeRadio" id="placeRadio1" value="4">
+              <label class="form-check-label" for="placeRadio1">
+                Manhattan
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="placeRadio" id="placeRadio2" value="3">
+              <label class="form-check-label" for="placeRadio2">
+                Brooklyn
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="placeRadio" id="placeRadio3" value="2">
+              <label class="form-check-label" for="placeRadio3">
+                Queens
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="placeRadio" id="placeRadio4" value="1">
+              <label class="form-check-label" for="placeRadio4">
+                Bronx
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="placeRadio" id="placeRadio5" value="0">
+              <label class="form-check-label" for="placeRadio5">
+                Staten Island
+              </label>
+            </div>           
+
+            What type of room is your rental? 
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="roomRadio" id="roomRadio1" value="2">
+              <label class="form-check-label" for="roomRadio1">
+                Entire home/apt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="roomRadio" id="roomRadio2" value="1">
+              <label class="form-check-label" for="roomRadio2">
+                Private room
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="roomRadio" id="roomRadio3" value="0">
+              <label class="form-check-label" for="roomRadio3">
+                Shared room
+              </label>
+            </div> -->
+              
+          </form>
+      </div>
+    </div>
+    <a href="/submit" class="btn btn-danger btn-lg" style="font-size:5vw;">Submit</a>
+    <table>
+      <th>Result:</th>
+      
+      <tr></tr>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script>
+    function input( {
+      document.
+    })
+  </script> -->
+  <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "30vw";
+        document.getElementById("bars").style.display = "none";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("bars").style.display = "block";
+      }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</body>
+</html>
