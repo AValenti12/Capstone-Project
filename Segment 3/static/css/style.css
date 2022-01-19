@@ -77,13 +77,18 @@ h2{
   padding-left: 2vw!important;
   padding-right: 20vw; 
 }
+h3 {
+  background-color: transparent;
+}
 
 p {
-  font-size: 2vw;
+  font-size: 1vw;
   margin-left: 1vw;
   margin-right: 1vw;
 }
-
+li{
+  margin-bottom: 2rem;
+}
 .content-holder {
   /* background-color: rgba(221, 221, 221, 0.392); */
   /* left: 50%!important; */
@@ -104,19 +109,43 @@ p {
   color: #fdf4eb;
   height: calc(100vh);
 }
-.row {
+/* .container {
+  background-color: rgba(143, 188, 143, 0.653);
+} */
+.outer  {
+  background-color: rgba(143, 188, 143, 0.653);
+  outline: 5px solid rgba(143, 188, 143, 0.653);
+  border-radius: 1px;
+  margin: auto;
+}
+.descr  {
+  background-color: rgba(143, 188, 143, 0.653);
+  outline: 5px solid rgba(143, 188, 143, 0.653);
+  border-radius: 1px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1vw;
+}
+
+/* .row {
   float: left;
   margin-left: 1vw;
   margin-right: 1vw;
-}
+  padding: 0;
+} */
 .row1{
   margin-left: 1vw;
-  align-items: left;
+  align-items: center;
+  height: 50vw;
+  width: 96%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  
 }
 .row2{
   color:#fdf4eb;
   align-items: center;
-  height: 35vw;
+  height: 50vw;
   width: 96%;
   margin-left: 1vw;
   margin-right: 1vw;
@@ -134,15 +163,38 @@ table#myTable.table.table-striped {
   text-align: left;
   color: #fdf4eb;
   font-size: small;
+  overflow-x: scroll;
 }
 
 .Container{
-  height: 35vw;
+  height: 50vw;
   width: 96%;
   overflow-y: auto;
   overflow-x: auto;
   border-radius: 5px;
   margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+}
+table {
+  border-collapse: collapse;
+  background: rgb(43,43,43);
+  table-layout: fixed;
+  width: 100%;
+}
+.table th {
+  padding: 0.5vw 1vw;
+  border: 1px solid #fdf4eb;
+  width: 20vw;
+  font-size: normal;
+}
+.table td {
+  font-size: normal;
+  width: 20vw;
+  height: 10vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Designing for scroll-bar */
@@ -195,15 +247,23 @@ background-color: transparent;
       padding-right: 20vw; 
     }
     .Container{
-      height: 90%;
+      height: 150vw;
       width: 90%;
       overflow-y: auto;
       overflow-x: auto;
       border-radius: 5px;
       margin: 0 auto;
     }
-    .float-right{
-      width:6vw;
+    .row2{
+      color:#fdf4eb;
+      align-items: center;
+      height: 150vw;
+      width: 96%;
+      margin-left: 1vw;
+      margin-right: 1vw;
+
     }
+    
   }
 
+ 

@@ -71,7 +71,7 @@ def logreg(X,y,test):
             ans = "This rental should do well!"
             return ans
         else:
-            ans = "Your rental may need some work"
+            ans = "Your rental may need some work..."
         return ans
 
     result = {'result':result(y_pred)}

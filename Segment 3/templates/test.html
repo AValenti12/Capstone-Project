@@ -19,7 +19,7 @@
 <body>
   <div class="w3-top">
     <div class="w3-left home">
-        <div class="position-relative" style="font-size: 8vw;margin-bottom: 0;margin-left: 1vw;"> Test</div>
+        <div class="position-relative" style="font-size: 3vw;margin-bottom: 0;margin-left: 1vw;"> Test</div>
     </div>
         
     <!-- Navbar -->
@@ -34,14 +34,14 @@
     </div>
 
       <div class="w3-right w3-padding">
-        <span id="bars" style="font-size:5vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
+        <span id="bars" style="font-size:3vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
       </div>
   </div>
         
   <!-- Page content -->
-  <p style="font-size: 2vw;padding-top: 12%;margin: 1vw;">Now, check to see if your rental may also get positive feed back if listed by inputting your information below</p> 
+  <p style="font-size: 1.25vw;padding-top: 5%;margin: 1vw;">Now, check to see if your rental may also get positive feedback if listed by inputting your information below</p> 
   <hr>
-  <div class="row" style="font-size: 1.75vw;margin-left: 1vw; margin-bottom: 10vw;">
+  <div class="row" style="font-size: 1vw;margin-left: 1vw; margin-bottom: 10vw;">
 
     <form action="/result" method="post">
       Is your identity verified?
@@ -257,7 +257,7 @@
 
       <br></br>    
 
-      <a href="/result" id="submit">Submit</a>
+      <a href="/result" class="btn btn-outline-light" id="submit">Submit</a>
 
       <br></br>
     </form>
@@ -282,15 +282,15 @@
   </script>
   
   <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "28vw";
-        document.getElementById("bars").style.display = "none";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("bars").style.display = "block";
-      }
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "35vw";
+      document.getElementById("bars").style.display = "none";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("bars").style.display = "block";
+    }
   </script>
 </body>
 </html>

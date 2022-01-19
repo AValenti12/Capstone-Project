@@ -17,7 +17,9 @@
   </head>
   <body>
     <div class="w3-top">
-        
+      <div class="w3-left home">
+        <div class="position-relative" style="font-size: 8vw;margin-bottom: 0;margin-left: 1vw;"> Results</div>
+    </div>
       <!-- Navbar -->
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">&#xe5cd;</i></a>
@@ -30,44 +32,44 @@
       </div>
 
       <div class="w3-right w3-padding">
-          <span id="bars" style="font-size:5vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
+          <span id="bars" style="font-size:5vw;cursor:pointer;color:#fdf4eb;z-index: 0;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
       </div>
     
       <!-- Page content -->
     
-      <div class="position-relative" style="font-size: 5vw;margin-bottom: 0;margin-left: 1vw;"> Results</div> 
-      <hr></hr>
-      <div style="font-size: 2.5vw;margin-left: 1vw;margin-right: 1vw;">
+      <p style="font-size: 2vw;padding-top: 12%;margin: 1vw;"> </p> 
+      <hr>
+      <div style="font-size: 4vw;margin-left: 1vw;margin-right: 1vw;">
         {{ result }}
       </div>
       <br></br>
-      {% if {{result}} is 'This rental should do well!' %}:
-      <p>
+      {% if result == 'This rental should do well!' %}
+      <p style="font-size: 4vw;">
         Compared to existing listings, your rental is predicted to receive high ratings. 
-        <hr></hr>
+        <br>
         Good Luck!
       </p>
       {% else %}
-      <p>
+      <p style="font-size: 4vw;">
         Review our table and charts of existing listings data to find out how your rental can be improved.
-        <hr></hr>
+        <br>
         Good Luck!
       </p>
       {% endif %}
      
     </div>
     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "35vw";
-          document.getElementById("bars").style.display = "none";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("bars").style.display = "block";
-        }
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "35vw";
+        document.getElementById("bars").style.display = "none";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("bars").style.display = "block";
+      }
     </script>
-</body>
+  </body>
 
 </html>
 

@@ -21,9 +21,9 @@
   </head>
 
   <body>
-        <div class="w3-top">
+        <div class="container-fluid">
             <div class="w3-left home">
-                <div class="position-relative" style="font-size: 5vw;margin-bottom: 0;margin-left: 1vw;"> Data</div>
+                <div class="position-relative" style="font-size: 3vw;margin-bottom: 0;margin-left: 1vw;padding-bottom: 0;"> Data</div>
             </div>
             <!-- Navbar (sit on top) -->
             <div id="mySidenav" class="sidenav">
@@ -36,87 +36,101 @@
                 <a href="/" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe88a;</i><br>Home</a>
             </div>
             <div class="w3-right w3-padding">
-                <span id="bars" style="font-size:5vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
+                <span id="bars" style="font-size:3vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
             </div>
-        </div>  
-        <!-- Page content -->
-        <p style="font-size: 2.5vw;padding-top: 9%;margin: 1vw;"> Explore this dataset of existing rentals in NYC using the filter below</p>
-        <hr> 
-        <div class='row'>
-            <a href="#demo" data-toggle="collapse" style="color: #fdf4eb;padding-right: 0;">Filter Search<i class="material-icons" style="font-size: small;"> &#xe5c5;</i></a>
-            <div id="demo" class="collapse">
-            <form class="bg-light responsive">
-                <!--<p><h5>Filter Search</h5></p>-->
-            </form>
-            <ul class= "responsive" style="list-style-type: none;margin-left:1vw;padding-left: 0;"> <!--"list-group">-->
-                <!--<p><h5>Filter Search</h5></p> -->
-                <br></br>
-                <li class="responsive nav-item col-6 col-md">  <!--"list-group-item">-->
-                    <label for="Price">Price (USD)</label>
-                    <input class="float-right" type="number" placeholder="100" id="Price" />
-                </li>
-                <li class="responsive nav-item col-6 col-md">  <!--"list-group-item">-->
-                    <label for="Accommodates">No. of people</label>
-                    <input class="float-right" type="number" placeholder="2" id="Accommodates" />
-                </li>
-                <li class="responsive nav-item col-6 col-md">  <!--"list-group-item">-->
-                    <label for="Beds">No. of beds</label>
-                    <input class="float-right" type="number" placeholder="1" id="Beds" />
-                </li>
-                <li class="responsive nav-item col-6 col-md">  <!-- "list-group-item"> -->
-                    <label for="Neighborhood">Neighborhood&nbsp;</label>
-                    <input class="float-right" type="text" placeholder="Brooklyn" id="Neighborhood" />
-                </li>
-                <li class="responsive nav-item col-6 col-md">  <!--"list-group-item"> -->
-                    <label for="Review Rating">Review Rating&nbsp;</label>
-                    <input class="float-right" type="number" placeholder="5" id="Review Rating" />
-                </li>
-            </ul>
+         
+            <!-- Page content -->
+            <p style="font-size: 1.25vw;padding-top: 5%;margin: 1vw;"> Explore this dataset of existing rentals in NYC using the filter below</p>
+            <hr> 
+            <div class="container-fluid">
+                <div class='row'>
+                    <div class="col-md-6 align-self-left">
+                        <a href="#demo" data-toggle="collapse" style="color: #fdf4eb;padding-right: 0;">Filter Search<i class="material-icons" style="font-size: small;"> &#xe5c5;</i></a>
+                        <div id="demo" class="collapse">
+                            <form class="bg-light responsive">
+                                <!--<p><h5>Filter Search</h5></p>-->
+                            </form>
+                            <ul style="list-style-type: none;margin-left:1vw;padding-left: 0;"> <!--"list-group">-->
+                                <!--<p><h5>Filter Search</h5></p> -->
+                                <br></br>
+                                <li class="responsive nav-item col-6 col-md align-self-center">  <!--"list-group-item">-->
+                                    Price (USD)
+                                    <br>
+                                    <input type="number" placeholder="100" id="Price" />
+                                </li>
+                                <li class="responsive nav-item col-6 col-md align-self-center">  <!--"list-group-item">-->
+                                    No. of people
+                                    <br>
+                                    <input type="number" placeholder="2" id="Accommodates" />
+                                </li>
+                                <li class="responsive nav-item col-6 col-md align-self-center">  <!--"list-group-item">-->
+                                    No. of beds
+                                    <br>
+                                    <input type="number" placeholder="1" id="Beds" />
+                                </li>
+                                <li class="responsive nav-item col-6 col-md align-self-center">  <!-- "list-group-item"> -->
+                                    Neighborhood
+                                    <br>
+                                    <input type="text" placeholder="Brooklyn" id="Neighborhood" />
+                                </li>
+                                <li class="responsive nav-item col-6 col-md align-self-center">  <!--"list-group-item"> -->
+                                    Review Rating
+                                    <br>
+                                    <input type="number" placeholder="5" id="Review Rating" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <br></br>
-        <div class="Container">
-        
-            <div class='row2'>
+            <br></br>
+            <div class="container">
+            
+                <div class="row">
+                    <div class="col-md-12 align-self-center" style="overflow-x: scroll;">
+                        <table id="myTable" border="1" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <!--<th></th>-->
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Security Deposit</th>
+                                    <th>Neighborhood</th>
+                                    <th>Description</th>
+                                    <th>Room Type</th>
+                                    <th>Accommodates</th>
+                                    <th>Bathrooms</th>
+                                    <th>Bedrooms</th>
+                                    <th>Beds</th>
+                                    <th>Bed Type</th>
+                                    <th>Cleaning Fee</th>
+                                    <th>Guests Included</th>
+                                    <th>Extra People</th>
+                                    <th>Minimum Nights</th>
+                                    <th>Maximum Nights</th>
+                                    <th>House Rules</th>
+                                    <th># of Reviews</th>
+                                    <th>Review Rating</th>
+                                    <th>Cleanliness Rating</th>
+                                    <th>Check-In Rating</th>
+                                    <th>Communication Rating</th>
+                                    <th>Location Rating</th>
+                                    <th>Value Rating</th>
+                                </tr>    
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
                 
-                <table id="myTable" responsive border="1" class="table table-striped">
-                    <thead>
-                        <tr responsive>
-                            <!--<th></th>-->
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Security Deposit</th>
-                            <th>Neighborhood</th>
-                            <th>Description</th>
-                            <th>Room Type</th>
-                            <th>Accommodates</th>
-                            <th>Bathrooms</th>
-                            <th>Bedrooms</th>
-                            <th>Beds</th>
-                            <th>Bed Type</th>
-                            <th>Cleaning Fee</th>
-                            <th>Guests Included</th>
-                            <th>Extra People</th>
-                            <th>Minimum Nights</th>
-                            <th>Maximum Nights</th>
-                            <th>House Rules</th>
-                            <th># of Reviews</th>
-                            <th>Review Rating</th>
-                            <th>Cleanliness Rating</th>
-                            <th>Check-In Rating</th>
-                            <th>Communication Rating</th>
-                            <th>Location Rating</th>
-                            <th>Value Rating</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-    
-        </div>        
-        <!--</div>-->
-      
+        
+            </div>        
+        </div>
+        <script>
+            $('.pane-hScroll').scroll(function() {
+            $('.pane-vScroll').width($('.pane-hScroll').width() + $('.pane-hScroll').scrollLeft());
+            });
+        </script>
         <script>
             function openNav() {
             document.getElementById("mySidenav").style.width = "35vw";
