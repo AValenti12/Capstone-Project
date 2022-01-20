@@ -1,9 +1,5 @@
 # Team Airbnb (Capstone-Project)
 
-
-
-## [Our Google presentation](https://docs.google.com/presentation/d/17gLreVk9qs4D5XYPW71cTR6SC54PzCW9I16BNp66RlI/edit?usp=sharing)
-
 #
 ## Team Members
 1. Amy V. (Square)
@@ -13,7 +9,7 @@
 
 ---
 ## Purpose
-Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb's available in NYC and see what has made them successful. We looked at price, location, and any key amenities that may help accommodations receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. We were interested in Airbnb since it has become such a common or go to resource and have had personal positive experiences with it. 
+Airbnb has grown tremendously over the past few years offering users a convenient way to find accommodations other than traditional hotels. For this project, we decided to investigate data about past Airbnb's available in NYC and see what has made them successful. We looked at price, location, and how many amenities available that may help rentals receive higher reviews and be more sought-after properties. We have set out to help future hosts in their Airbnb journeys to learn what will increase their chances of success while hosting an Airbnb. We were interested in Airbnb since it has become such a common or go to resource and have had personal positive experiences with it. 
 
 
 ---
@@ -27,25 +23,27 @@ We sourced our data from a data mining article from the website [Medium](https:/
 **Note:** Communication protocols removed as per Segment 3 guidelines
 
 ---
-## Proposed Machine Learning Model
+## Original Proposed Machine Learning Model
 Since out outcome is binary (whether or not the rental was successful), we propose to use logistic regression model for this project. Based on our outcomes we may implement other model(s) as needed.
 
 Python File: 
-* [Model Rework](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_rework.ipynb)
+* [Model Rework](https://github.com/AValenti12/Capstone-Project/blob/main/docs/model.py)
 * [Data Integration Area 1](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model.ipynb)
 * [Data Integration Area 2](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/dash/table.py)
 * [Data Integration Area 3](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/database_integration/Read_Data_MongoDF.ipynb)
 
-Airbnb Listings Dataset Original vs. Clean
+Data Cleanup
 
-<img src="https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/ML_model/listings_csv_original.png?raw=true" width="200" height="100" >  <img src="https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/ML_model/clean_listings_csv.png?raw=true" width="200" height="100" >
+![](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/make_label.png?raw=true)
 
-Airbnb Listings Data Shape Original vs. Clean
-
-<img src="https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/ML_model/data_shape_original.png?raw=true" width="190" height="100" >  <img src="https://github.com/AValenti12/Capstone-Project/blob/main/ABNB%20-%20Segment%201/images/ML_model/df_shape_after.png?raw=true" width="110" height="100" >
 > Before running any tests, the data was cleaned and paired down from the original dataset. A new column 'is_successful' was made based off of the 'review_scores_value' column and was added to the  dataframe. This will be our target for the model. If the airbnb had a score above a 5 we will consider it successful and label it as a 1. If the score value was less than or equal to 5 it will be labeled as a 0. The rest of the columns will be the features for this model that will predict whether the Airbnb listing will have successful reviews or not.
 
-## Logistic Regression Model
+Encoded Categorical Data
+
+![](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/encode1.png?raw=true)
+>Above is an example of how we still made use of object data types.
+
+Logistic Regression Model(Original Model)
 
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/Screen%20Shot%202022-01-09%20at%209.13.19%20PM.png?raw=true)
 >  The columns that were not already numerical are given dummy variables during the cleaning process to be able to be passed through the model. The data was then split into three sets: a training set and test set. `StandardScaler()` was also used to normalize our dataset.
@@ -53,14 +51,31 @@ Airbnb Listings Data Shape Original vs. Clean
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/Screen%20Shot%202022-01-09%20at%209.14.29%20PM.png?raw=true)
 > The model is able to predict the outcome with about 80% accuracy. Several tests were done to see which model gave the best results.
 
-## Limitations
+Limitations
+
 ![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/Screen%20Shot%202022-01-09%20at%204.36.45%20PM.png?raw=true)
 > Since this is a simple model, comparing the importance of each can help determine if certain variables should be removed. After reviewing the chart, we decided to remove the Superhost variable to avoid skewing the outcomes.  
 
+Confusion Matrix
 
-## Model with Mongo Atlas Connection
-![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/conn1.png?raw=true)
-![](https://github.com/AValenti12/Capstone-Project/blob/main/Segment%202/ML_model/model_images/conn2.png?raw=true)
+![](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/testing_scores_sh.png?raw=true)
+> While this model gave what seemed to be accurate results, when we look at our confusion matrix we found that came from getting many successful listing correct. This out weighed the fact that it got many unsuccessful listing wrong.
+
+Total Successes
+
+![](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/many_successes.png?raw=true)
+>Overall, there are more successful labels than unsuccessful ones. This makes it difficult for the model to learn how to predict unsuccessful outcomes.
+
+---
+
+
+
+## Model Rework
+
+Go [here](https://github.com/AValenti12/Capstone-Project/blob/main/docs/Data%20Analysis%20and%20Model%20Selection.ipynb) to view other attempts to increase accuracy
+
+![](https://github.com/AValenti12/Capstone-Project/blob/main/Resources/Images/rf_ro_model.png?raw=true)
+> After reviewing our model, we decided to try and construct a more accurate model. We finalized our model by discarding a few more anomalies in our dataset and switched to using a [RandomForestClassifier()](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). The data was then scaled using the [RobustScaler()](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html#sklearn.preprocessing.RobustScaler.get_feature_names_out) since it is robust to outliers that may affect our results. As shown above, these changes did improve our model. 
 
 ---
 
@@ -93,6 +108,11 @@ Visit here for [Technology used](https://github.com/AValenti12/Capstone-Project/
 ---
 
 ## Dashboard
-Please visit [Our Google presentation](https://docs.google.com/presentation/d/1T547BrGVOcnZ-Ra_A7yQJQpM_mZYjYGBYauYgHVS4ok/edit?usp=sharing) deck for dashboard blue prints.
+[Files Used](https://github.com/AValenti12/Capstone-Project/tree/main/docs)
+
+Go here to download the video of our [dashboard](https://github.com/AValenti12/Capstone-Project/tree/main/video) in use.
 
 ---
+
+## Our Google presentation
+Visit here for our [Google Slides](https://docs.google.com/presentation/d/17gLreVk9qs4D5XYPW71cTR6SC54PzCW9I16BNp66RlI/edit?usp=sharing).
