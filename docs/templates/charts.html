@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYC Rental Rating</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&family=Lato&family=Forum" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="../static/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div>
+      <div class="w3-left home">
+          <div style="font-size: 3vw;margin-bottom: 0;margin-left: 1vw;padding-bottom: 0;"> Charts</div>
+      </div>
+          
+      <!-- Navbar (sit on top) -->
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">&#xe5cd;</i></a>
+          <a href="/about" onclick="closeNav()" class="w3-bar-item"><i class='material-icons'>&#xea19;</i><br>About</a>
+          <a href="/data" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe2c2;</i><br>Data</a>
+          <a href="/charts" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf092;</i><br>Charts</a>
+          <a href="/test" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xeb9b;</i><br>Test</a>
+          <a href="/team" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xf233;</i><br>Team</a>
+          <a href="/" onclick="closeNav()" class="w3-bar-item"><i class="material-icons">&#xe88a;</i><br>Home</a>
+      </div>
+
+      <div class="w3-right w3-padding">
+          <span id="bars" style="font-size:3vw;cursor:pointer;color:#fdf4eb;" onclick="openNav()" class="material-icons">&#xe5d4;</span>
+      </div>
+          
+    </div>
+    
+    <!-- Page content -->
+
+    <p style="font-size: 1.25vw;padding-top: 5%;margin-left: 1vw;">Use these interactive charts to take a closer at the data</p> 
+    <hr>
+    <div class="Container" style="height: fit-content; width: fit-content;overflow-x: auto;padding-right: 0;">
+      <div class="row">
+        <div class='tableauPlaceholder' id='viz1642474070044'><noscript><a href='#'><img alt='Airbnb Visualizations ' src='29&#47;29M28WDDJ&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;29M28WDDJ' /> <param name='toolbar' value='yes' /><param name='static_image' value='29&#47;29M28WDDJ&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1642474070044');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';vizElement.style.alignSelf='center';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </div>
+    <br></br>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "35vw";
+          document.getElementById("bars").style.display = "none";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("bars").style.display = "block";
+        }
+    </script>
+  </body>
+</html>
